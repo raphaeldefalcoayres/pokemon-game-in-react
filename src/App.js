@@ -1,7 +1,14 @@
 import React from 'react';
+import Board from './components/Board';
+import GlobalStyle from './styles/global';
 
 function App() {
-  return <h1>Welcome to react boilerplate</h1>;
+  return (
+    <>
+      <GlobalStyle />
+      <Board />
+    </>
+  );
 }
 
 export default App;
