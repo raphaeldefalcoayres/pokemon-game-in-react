@@ -21,16 +21,16 @@ const CharWalkBottom = keyframes`
 `;
 
 const directionAnimation = direction => {
-  if (direction === 'top') {
+  if (direction === 'ArrowUp') {
     return CharWalkTop;
   }
-  if (direction === 'bottom') {
+  if (direction === 'ArrowDown') {
     return CharWalkBottom;
   }
-  if (direction === 'left') {
+  if (direction === 'ArrowLeft') {
     return CharWalkLeft;
   }
-  if (direction === 'right') {
+  if (direction === 'ArrowRight') {
     return CharWalkRight;
   }
 
@@ -47,7 +47,7 @@ export const Character = styled.div`
   background-position-x: 0px;
   background-position-y: -112px;
   position: absolute;
-  bottom: ${props =>
+  top: ${props =>
     props.position.y ? `${(props.position.y - 1) * 26}px` : '0px'};
   left: ${props =>
     props.position.x ? `${(props.position.x - 1) * 26}px` : '0px'};
